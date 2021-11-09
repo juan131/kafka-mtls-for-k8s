@@ -44,6 +44,12 @@ As an alternative, you can manually install each of the required charts. The tut
 
 You can find the corresponding **values.yaml** to deploy each of these charts under the *values/* directory.
 
-## Testing the setup
+## The setup
+
+Using this tutorial, the following setup will be deployed in your Kubernetes cluster:
+
+![Kafka with Mutual TLS for K8s](docs/img/kafka-mtls-for-k8s.png)
+
+### Testing the setup
 
 Once you deploy the required solutions, you can use the [test.sh](test.sh) script to test everything is working as expected.

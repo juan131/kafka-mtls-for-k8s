@@ -12,4 +12,4 @@ zookeeper:
   enabled: false
 externalZookeeper:
   servers:
-    - zookeeper.kafka.svc.cluster.local
+    - "zookeeper.{{ .Release.Name }}.svc.cluster.local"

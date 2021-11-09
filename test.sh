@@ -120,7 +120,6 @@ info "Obtaining TLS certs and creating client.properties for Kakfa Client..."
 rm -f "${ROOT_DIR}/resources/client.properties"
 cat > "${ROOT_DIR}/resources/client.properties" << EOF
 security.protocol=SSL
-ssl.endpoint.identification.algorithm=
 ssl.keystore.type=PEM
 ssl.truststore.type=PEM
 EOF
