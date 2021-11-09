@@ -8,8 +8,6 @@ auth:
       - kafka-0-tls
       - kafka-1-tls
       - kafka-2-tls
-    endpointIdentificationAlgorithm: ""
-  tlsEndpointIdentificationAlgorithm: ""
 zookeeper:
   enabled: false
 externalZookeeper:
