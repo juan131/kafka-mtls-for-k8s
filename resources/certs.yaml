@@ -1,0 +1,92 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: kafka-0-tls
+spec:
+  secretName: kafka-0-tls
+  dnsNames:
+    - kafka-0.kafka-headless.kafka.svc.cluster.local
+    - kafka-0.kafka-headless.kafka
+    - kafka.kafka.svc.cluster.local
+    - kafka.kafka
+    - kafka-0.kafka-headless
+  privateKey:
+    algorithm: RSA
+    encoding: PKCS1
+    size: 2048
+  usages:
+    - server auth
+    - client auth
+  issuerRef:
+    name: kafka-cluster-issuer
+    kind: Issuer
+    group: cert-manager.io
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: kafka-1-tls
+spec:
+  secretName: kafka-1-tls
+  dnsNames:
+    - kafka-1.kafka-headless.kafka.svc.cluster.local
+    - kafka-1.kafka-headless.kafka
+    - kafka.kafka.svc.cluster.local
+    - kafka.kafka
+    - kafka-1.kafka-headless
+  privateKey:
+    algorithm: RSA
+    encoding: PKCS1
+    size: 2048
+  usages:
+    - server auth
+    - client auth
+  issuerRef:
+    name: kafka-cluster-issuer
+    kind: Issuer
+    group: cert-manager.io
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: kafka-2-tls
+spec:
+  secretName: kafka-2-tls
+  dnsNames:
+    - kafka-2.kafka-headless.kafka.svc.cluster.local
+    - kafka-2.kafka-headless.kafka
+    - kafka.kafka.svc.cluster.local
+    - kafka.kafka
+    - kafka-2.kafka-headless
+  privateKey:
+    algorithm: RSA
+    encoding: PKCS1
+    size: 2048
+  usages:
+    - server auth
+    - client auth
+  issuerRef:
+    name: kafka-cluster-issuer
+    kind: Issuer
+    group: cert-manager.io
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: kafka-client
+spec:
+  secretName: kafka-client
+  dnsNames:
+    - kafka-client.kafka.svc.cluster.local
+    - kafka-client
+  privateKey:
+    algorithm: RSA
+    encoding: PKCS1
+    size: 2048
+  usages:
+    - server auth
+    - client auth
+  issuerRef:
+    name: kafka-cluster-issuer
+    kind: Issuer
+    group: cert-manager.io
