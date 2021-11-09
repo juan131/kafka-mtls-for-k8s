@@ -11,7 +11,7 @@ metadata:
   name: kafka-ca
 spec:
   isCA: true
-  secretName: kafka-ca-secret
+  secretName: kafka-ca
   commonName: kafka.kafka
   dnsNames:
     - kafka.kafka.svc.cluster.local
@@ -31,4 +31,4 @@ metadata:
   name: kafka-cluster-issuer
 spec:
   ca:
-    secretName: kafka-ca-secret
+    secretName: kafka-ca
